@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+
+<style>
+
+
+    .container {
+        position: relative;
+        top: 300px;
+        left: 800px;        
+    }
+
+    .btn-wrap {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        background: #04DDFD;
+    }
+
+    .container .inner-ring {
+        /* background: rgba(181, 244, 253, 0.8); */
+        /* background: red; */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 50%;
+        border-bottom: solid 2px grey;
+        
+    }
+
+    .container .inner-ring .img-wrap {
+        box-shadow: 4px 5px 12px 1px grey;
+        padding: 10px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 5px;
+    }
+
+    .container .inner-ring .img-wrap:hover {
+        cursor: pointer;
+        /* box-shadow: 4px 5px 12px 1px grey; */
+        box-shadow: white;
+        padding: 10px;
+        background: #fff;
+        box-shadow: green;
+        /* height: 70px;
+        width: 70px; */
+        border-radius: 50%;
+        box-shadow: 5px;
+    }
+
+    .container .inner-ring .img-wrap:active {
+        margin-top: 2px;
+        cursor: pointer;
+        /* box-shadow: 4px 5px 12px 1px grey; */
+        padding: 10px;
+        background: #fff;
+        box-shadow: green;
+        /* height: 70px;
+        width: 70px; */
+        border-radius: 50%;
+        box-shadow: 5px;
+    }
+
+    .container .inner-ring .img-wrap:active {
+        /* box-shadow: 4px 5px 12px 1px grey; */
+        padding: 10px;
+        background: #fff;
+        box-shadow: green;
+        /* height: 70px;
+        width: 70px; */
+        border-radius: 50%;
+        box-shadow: 5px;
+    }
+
+    .btn-wrap .inner-ring {
+        animation: hoge 2s ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    .inner-ring:active {
+        /* box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19); */
+        box-shadow: none;
+        border-bottom: none;
+    }
+
+    .ring {
+        background: #C7E25F;
+        position: absolute;
+        z-index: -3;
+        border-radius: 100px;
+        height: 70px;
+        width: 70px;
+        animation: pulsate 2s ease-out;
+    }
+
+    .ring2 {
+        background: #C7E25F;
+        position: absolute;
+        z-index: -3;
+        border-radius: 100px;
+        height: 70px;
+        width: 70px;
+        animation: pulsate 2s ease-out 0.6s;
+        animation-iteration-count: infinite;
+    }
+
+    .ring3 {
+        background: rgba(181, 244, 253, 0.8);
+        position: absolute;
+        z-index: -3;
+        border-radius: 100px;
+        height: 70px;
+        width: 70px;
+        animation: pulsate 2s ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes pulsate {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2, 2);
+            opacity: 0.0;
+        }
+    }
+
+    @keyframes pulsate2 {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(2, 2);
+            opacity: 0.0;
+        }
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <span class="inner-ring">
+            <div class="img-wrap">
+                <img class="btn-wrap" src="image/small.png" alt="">
+            </div>
+        </span>
+        <span id="ring">
+        </span>
+        <span id="ring2">
+        </span>
+        <span id="ring3" class="ring3">
+        </span>
+    </div>
+
+    <script>
+        $(".img-wrap").on('click', function () {
+            $('#ring').toggleClass('ring')
+            $('#ring2').toggleClass('ring2');
+            $('#ring3').toggleClass('ring3');
+
+
+            setTimeout(function () {
+                $('#ring').toggleClass('ring')
+                $('#ring2').toggleClass('ring2');
+                $('#ring3').toggleClass('ring3');
+            }, 2500);
+        });
+    </script>
+</body>
+
+</html>

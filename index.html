@@ -11,72 +11,106 @@
 </head>
 <style>
     body {
-        background: gray;
+        /* background: gray; */
         font-family: Roboto, "游ゴシック", sans-serif;
+    }
+
+    header {
+        height: 140px;
+        width: 100%;
+        background-color: #46A5E4;
+    }
+
+    .logo-container {
+        padding-top: 26px;
+        margin-left: 82px;
+    }
+
+    .main-content {
+        display: flex;
+    }
+
+    .seat-img {
+        margin-top: 84px;
+        margin-left: 161px;
+        box-shadow: 3px 3px 3px#B7B7B7;
+    }
+
+    .content-right {
+        margin-left: 80px;
+        margin-top: 120px;
+        width: 400px;
+        /* background-color: #ffd3a8; */
+        z-index: 1;
+    }
+
+
+    .container {
+        position: relative;
+        top: 100px;
+        left: 100px;        
     }
 
     .btn-wrap {
         display: block;
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         border-radius: 100px;
         background: #04DDFD;
     }
 
-    .inner-ring {
+    .container .inner-ring {
         /* background: rgba(181, 244, 253, 0.8); */
         /* background: red; */
         position: absolute;
-        top: -10px;
-        left: -10px;
+        top: 0px;
+        left: 0px;
         border-radius: 50%;
         border-bottom: solid 2px grey;
+        
     }
 
-    .img-wrap {
+    .container .inner-ring .img-wrap {
         box-shadow: 4px 5px 12px 1px grey;
-        padding: 10px;
+        padding: 30px;
         background: #fff;
-        box-shadow: green;
-
-        width: 50px;
         border-radius: 50%;
         box-shadow: 5px;
     }
 
-    .img-wrap:hover {
+    .container .inner-ring .img-wrap:hover {
         cursor: pointer;
         /* box-shadow: 4px 5px 12px 1px grey; */
         box-shadow: white;
-        padding: 10px;
+        padding: 30px;
         background: #fff;
         box-shadow: green;
-
-        width: 50px;
+        /* height: 70px;
+        width: 70px; */
         border-radius: 50%;
         box-shadow: 5px;
     }
 
-    .img-wrap:active {
+    .container .inner-ring .img-wrap:active {
         margin-top: 2px;
         cursor: pointer;
         /* box-shadow: 4px 5px 12px 1px grey; */
-        padding: 10px;
+        padding: 30px;
         background: #fff;
         box-shadow: green;
-
-        width: 50px;
+        /* height: 70px;
+        width: 70px; */
         border-radius: 50%;
         box-shadow: 5px;
     }
 
-    .img-wrap:active {
+    .container .inner-ring .img-wrap:active {
         /* box-shadow: 4px 5px 12px 1px grey; */
         padding: 10px;
         background: #fff;
         box-shadow: green;
-
-        width: 50px;
+        /* height: 70px;
+        width: 70px; */
         border-radius: 50%;
         box-shadow: 5px;
     }
@@ -92,46 +126,6 @@
         border-bottom: none;
     }
 
-    .btn-wrap:active .inner-ring {
-        animation: hoge 2s ease-out;
-        animation-iteration-count: infinite;
-    }
-
-    .btn-wrap:hover .inner-ring {
-        animation: hoge 2s ease-out;
-        animation-iteration-count: infinite;
-        /* animation-iteration-count: initial; */
-    }
-
-    .container {
-        position: relative;
-        top: 50px;
-        left: 50px;
-    }
-
-    @keyframes hoge {
-        0% {
-            transform: scale(1, 1);
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            transform: scale(2, 2);
-            opacity: 0.0;
-        }
-    }
-
-    .button {
-        position: relative;
-        display: block;
-        width: 50px;
-        height: 50px;
-        border: 1px solid #ccc;
-        border-radius: 100px;
-        background: #04DDFD;
-    }
-
     .ring {
         background: #C7E25F;
         position: absolute;
@@ -139,42 +133,29 @@
         border-radius: 100px;
         height: 70px;
         width: 70px;
-        top: 500px;
-        left: 90px;
         animation: pulsate 2s ease-out;
-        /* animation-iteration-count: infinite; */
     }
 
     .ring2 {
         background: #C7E25F;
         position: absolute;
-        z-index: -3;
+        z-index: -1;
         border-radius: 100px;
         height: 70px;
         width: 70px;
-        top: 500px;
-        left: 90px;
         animation: pulsate 2s ease-out 0.6s;
-        /* animation-iteration-count: infinite; */
+        animation-iteration-count: infinite;
     }
 
     .ring3 {
         background: rgba(181, 244, 253, 0.8);
         position: absolute;
-        z-index: -3;
+        z-index: -1;
         border-radius: 100px;
         height: 70px;
         width: 70px;
-        top: 500px;
-        left: 90px;
         animation: pulsate 2s ease-out;
         animation-iteration-count: infinite;
-    }
-
-    .ring:hover {
-        animation: pulsate 2s ease-out;
-        /* スピードなど */
-        /* animation-iteration-count: infinite; */
     }
 
     @keyframes pulsate {
@@ -203,33 +184,16 @@
         }
     }
 
-    header {
-        height: 140px;
-        width: 100%;
-        background-color: #92D6F2;
+    .text-center{
+        text-align: center;
     }
 
-    .logo-container {
-        padding-top: 26px;
-        margin-left: 82px;
+    .mini-img{
+        position: relative;
+        top: 4px;
+        left: -2px;
     }
 
-    .main-content {
-        display: flex;
-    }
-
-    .seat-img {
-        margin-top: 120px;
-        margin-left: 293px;
-    }
-
-    .content-right {
-        margin-left: 80px;
-        margin-top: 120px;
-        width: 400px;
-        background-color: #ffd3a8;
-
-    }
 </style>
 
 <body>
@@ -247,19 +211,19 @@
             </div>
         </div>
         <div class="content-right">
-            <p>座席番号と名前を入力して
-                <img src="image/small.png" width="20px" alt="">を押して下さい</p>
+            <p class="text-center">座席番号と名前を入力して
+                <img src="image/small.png" class="mini-img" width="20px" alt="">を押して下さい</p>
             <div class="container2">
                 <form>
                     <div class="group">
-                        <input type="text" required>
+                        <input type="text" class="withicon-seatnum" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Seat No</label>
                     </div>
 
                     <div class="group">
-                        <input type="text" required>
+                        <input type="text" class="withicon-name" required>
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Name</label>
@@ -271,13 +235,15 @@
                                 <img class="btn-wrap" src="image/small.png" alt="">
                             </div>
                         </span>
+                        <span id="ring">
+                        </span>
+                        <span id="ring2">
+                        </span>
+                        <span id="ring3" class="ring3">
+                        </span>
                     </div>
-                    <span id="ring">
-                    </span>
-                    <span id="ring2">
-                    </span>
-                    <span id="ring3" class="ring3">
-                    </span>
+
+
                 </form>
             </div>
         </div>
@@ -291,16 +257,19 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-    <script>
-        $(".img-wrap").on('click', function () {
-            $('#ring').toggleClass('ring')
-            $('#ring2').toggleClass('ring2');
-            setTimeout(function () {
+        <script>
+            $(".img-wrap").on('click', function () {
                 $('#ring').toggleClass('ring')
                 $('#ring2').toggleClass('ring2');
-            }, 2500);
-        });
-    </script>
+                $('#ring3').toggleClass('ring3');
+    
+                setTimeout(function () {
+                    $('#ring').toggleClass('ring')
+                    $('#ring2').toggleClass('ring2');
+                    $('#ring3').toggleClass('ring3');
+                }, 2500);
+            });
+        </script>
 </body>
 
 </html>

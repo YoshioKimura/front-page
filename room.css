@@ -9,8 +9,7 @@ body {
 }
 
 .container2 {
-    font-family: 'Roboto';
-    width: 600px;
+    width: 100%;
     margin: 30px auto 0;
     display: block;
     background: #FFF;
@@ -38,6 +37,19 @@ input {
     width: 300px;
     border: none;
     border-bottom: 1px solid #757575;
+    text-align: center;
+}
+
+.withicon-seatnum{
+    background-image: url("./image/marker-mini.png");
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+}
+
+.withicon-name{
+    background-image: url("./image/name-mini.png");
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
 }
 
 input:focus {
@@ -47,6 +59,7 @@ input:focus {
 /* LABEL ======================================= */
 
 label {
+    padding-left: 40px;
     color: #999;
     font-size: 18px;
     font-weight: normal;

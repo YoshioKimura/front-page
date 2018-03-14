@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="room.css">
 </head>
 <style>
+    /* ================================================== *
+ *  common
+ * ================================================== */
+
     body {
-        /* background: gray; */
         font-family: Roboto, "游ゴシック", sans-serif;
+        background-color: aqua;
     }
 
     header {
@@ -26,6 +30,32 @@
         margin-left: 82px;
     }
 
+    @media screen and ( max-width:480px) {
+        header {
+            height: 70px;
+            width: 100%;
+            background-color: #46A5E4;
+        }
+
+        .logo-container img {
+            width: 121px;
+            height: 50px;
+            /* padding-top: 26px;
+            margin-left: 82px; */
+        }
+
+        .logo-container {
+            padding-top: 10px;
+            margin-left: 30px;
+        }
+    }
+
+
+
+/* ================================================== *
+ *  main-left
+ * ================================================== */
+
     .main-content {
         display: flex;
     }
@@ -36,6 +66,39 @@
         box-shadow: 3px 3px 3px#B7B7B7;
     }
 
+    @media screen and ( max-width:480px) {
+        .content-left{
+            padding-top: 20px;
+            width: 100%;
+            margin: auto 0;
+            /* background: greenyellow; */
+        }
+        .main-content {
+            display: block;
+        }
+        .seat-img {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 0px;
+            box-shadow: 3px 3px 3px#B7B7B7;
+            margin: auto;
+        }
+
+        .seat-img img {
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+/* ================================================== *
+ *  main-right
+ * ================================================== */
+
     .content-right {
         margin-left: 80px;
         margin-top: 120px;
@@ -44,11 +107,19 @@
         z-index: 1;
     }
 
+    @media screen and ( max-width:480px) {
+        .content-right{
+            margin-top: 15px;
+            margin-left: 0px;
+            width: 100%;
+        }
+    }
+
 
     .container {
         position: relative;
         top: 50px;
-        left: 50px;        
+        left: 50px;
     }
 
     .btn-wrap {
@@ -67,7 +138,7 @@
         left: 0px;
         border-radius: 50%;
         border-bottom: solid 2px grey;
-        
+
     }
 
     .container .inner-ring .img-wrap {
@@ -171,16 +242,15 @@
         }
     }
 
-    .text-center{
+    .text-center {
         text-align: center;
     }
 
-    .mini-img{
+    .mini-img {
         position: relative;
         top: 4px;
         left: -2px;
     }
-
 </style>
 
 <body>
@@ -192,11 +262,13 @@
     </header>
 
     <div class="main-content">
+
         <div class="content-left">
             <div class="seat-img">
                 <img src="image/gsseet.png" width="500px" height="500px" alt="">
             </div>
         </div>
+
         <div class="content-right">
             <p class="text-center">座席番号と名前を入力して
                 <img src="image/small.png" class="mini-img" width="20px" alt="">を押して下さい</p>
@@ -229,8 +301,6 @@
                         <span id="ring3" class="ring3">
                         </span>
                     </div>
-
-
                 </form>
             </div>
         </div>
@@ -244,19 +314,19 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-        <script>
-            $(".img-wrap").on('click', function () {
+    <script>
+        $(".img-wrap").on('click', function () {
+            $('#ring').toggleClass('ring')
+            $('#ring2').toggleClass('ring2');
+            $('#ring3').toggleClass('ring3');
+
+            setTimeout(function () {
                 $('#ring').toggleClass('ring')
                 $('#ring2').toggleClass('ring2');
                 $('#ring3').toggleClass('ring3');
-    
-                setTimeout(function () {
-                    $('#ring').toggleClass('ring')
-                    $('#ring2').toggleClass('ring2');
-                    $('#ring3').toggleClass('ring3');
-                }, 2500);
-            });
-        </script>
+            }, 2500);
+        });
+    </script>
 </body>
 
 </html>

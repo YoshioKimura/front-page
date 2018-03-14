@@ -4,12 +4,27 @@
 
 /* basic stylings ------------------------------------------ */
 
-.container2 {
+
+
+/* ================================================== *
+ *  form animation
+ * ================================================== */
+ .container2 {
     width: 100%;
     margin: 30px auto 0;
     display: block;
     background: #FFF;
     padding: 10px 50px 0px;
+}
+
+@media screen and ( max-width:480px) {
+    .container2 {
+        width: 100%;
+        margin: 30px auto 0;
+        display: block;
+        background: #FFF;
+        padding: 0px;
+    }
 }
 
 
@@ -18,8 +33,6 @@ h2 small {
     color: #888;
     display: block;
 }
-
-/* form starting stylings ------------------------------- */
 
 .group {
     position: relative;

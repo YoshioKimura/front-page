@@ -4,16 +4,12 @@
 
 /* basic stylings ------------------------------------------ */
 
-body {
-    /* background: url(https://scotch.io/wp-content/uploads/2014/07/61.jpg); */
-}
-
 .container2 {
     width: 100%;
     margin: 30px auto 0;
     display: block;
     background: #FFF;
-    padding: 10px 50px 50px;
+    padding: 10px 50px 0px;
 }
 
 
@@ -51,6 +47,8 @@ input {
     background-repeat: no-repeat;
     background-position: 5px 10px;
 }
+
+
 
 input:focus {
     outline: none;

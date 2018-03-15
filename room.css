@@ -25,6 +25,18 @@
         background: #FFF;
         padding: 0px;
     }
+
+    input {
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 300px;
+        border: none;
+        margin: auto;
+        border-bottom: 1px solid #757575;
+        text-align: center;
+    }
+
 }
 
 
@@ -83,6 +95,29 @@ label {
     -webkit-transition: 0.2s ease all;
 }
 
+
+@media screen and ( max-width:480px) {
+    label {
+        padding-left: 67px;
+        color: #999;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+    .container2 form {
+        margin : 0 8px;
+    }
+
+
+
+}
+
 /* active state */
 
 input:focus~label,
@@ -101,7 +136,8 @@ input:valid~label {
 }
 
 .bar:before,
-.bar:after {
+.bar:after
+ {
     content: '';
     height: 2px;
     width: 0;
